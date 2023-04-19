@@ -1,0 +1,103 @@
+body {
+  background-color: #ff7eb9;
+  font-family: Arial, sans-serif;
+}
+
+#container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 50px;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+#shapes-container {
+  position: relative;
+  height: 200px;
+  margin-bottom: 50px;
+}
+
+.shape {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 5px solid #ffff33;
+  border-radius: 50%;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.circle {
+  background-color: #ffff33;
+  animation-name: bounce;
+}
+
+.star {
+  background-color: #ff007f;
+  clip-path: polygon(
+    50% 0%,
+    63% 38%,
+    100% 38%,
+    69% 59%,
+    82% 95%,
+    50% 75%,
+    18% 95%,
+    31% 59%,
+    0% 38%,
+    37% 38%
+  );
+  animation-name: jump;
+}
+
+@keyframes jump {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -25px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 25px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+#open-button {
+  background-color: #ffff33;
+  color: #ff007f;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+#open-button:hover {
+  background-color: #ff007f;
+  color: #ffff33;
+}
